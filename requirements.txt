@@ -1,0 +1,7 @@
+packaging
+jsonschema
+tk
+customtkinter
+vgamepad
+pygame
+keyboard
