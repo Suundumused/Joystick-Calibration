@@ -77,8 +77,10 @@ class UI:
                     "l_analog_offset_y": self.slider1.get(),
                     "r_analog_offset_x": self.slider2.get(),
                     "r_analog_offset_y": self.slider3.get(),
-                    "l_trigger_offset": self.slider4.get(),
-                    "r_trigger_offset": self.slider5.get() 
+                    #"l_trigger_offset": self.slider4.get(),
+                    #"r_trigger_offset": self.slider5.get()
+                    "l_trigger_offset": -1,
+                    "r_trigger_offset": -1 
                 }
             }
             vars.config = context

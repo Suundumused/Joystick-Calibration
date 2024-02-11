@@ -86,8 +86,6 @@ def read_joystick(vars):
         14: vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT,
         # Add more button mappings as needed...
     }
-                
-    pygame.init()
         
     while vars.joy_id == -1 and vars.ReadInput:
         vars.msg = "Set your joystick ID. Usually it's 1"
@@ -95,6 +93,7 @@ def read_joystick(vars):
     
     while vars.ReadInput:
         try:
+            pygame.init()
             pygame.joystick.init()
             joystick = pygame.joystick.Joystick(vars.joy_id)
             joystick.init()
@@ -108,6 +107,7 @@ def read_joystick(vars):
         
         except Exception:
             pygame.joystick.quit()
+            pygame.quit()
             vars.joy_id = -1
             vars.msg = "Joystick not found. Set your joystick ID. Usually it's 1"
             time.sleep(0.33)
